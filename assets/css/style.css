@@ -1987,18 +1987,22 @@ a:hover {
 
 .summaryBox .lbl {
   color: var(--muted);
-  font-weight: 500
+  font-weight: 500;
+  width: 105px;
+  position: relative;
 }
 
 .summaryBox .lbl::after {
   content: ":";
-  margin-left: 4px
+  margin-left: 4px;
+  position: absolute;
+  right: 0;
 }
 
 .summaryBox .val {
   color: var(--navy);
   font-weight: 500;
-  overflow-wrap: anywhere
+  overflow-wrap: anywhere;
 }
 
 .about .content ul li span {
