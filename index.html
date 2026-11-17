@@ -35,9 +35,12 @@
   ======================================================== -->
 <style>
   #hero .hero-role{font-size:20px;margin-top:22px;letter-spacing:.5px}
-  .skill-group{background:#fff;border-radius:12px;padding:20px;height:100%;box-shadow:0 0 24px rgba(0,0,0,.08)}
-  .skill-group h4{font-size:16px;font-weight:700;text-transform:uppercase;color:#173b6c;margin-bottom:14px;font-family:"Poppins",sans-serif}
-  .skill-chip{display:inline-block;background:#dce8f8;color:#173b6c;border-radius:20px;padding:6px 14px;margin:0 6px 8px 0;font-size:14px;font-weight:600}
+  .skill-block{margin-bottom:34px}
+  .skill-block h4{font-size:17px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:#64748b;margin-bottom:16px;font-family:"Poppins",sans-serif}
+  .skill-chip{display:inline-block;border-radius:14px;padding:11px 24px;margin:0 12px 12px 0;font-size:16px;font-weight:600}
+  .chip-fe{background:#f0faf6;border:1px solid #d3e8e0;color:#2f7d6b}
+  .chip-ux{background:#f1f4f9;color:#1e293b}
+  .chip-be{background:#f1f4f9;color:#334155;font-weight:500}
 </style>
 </head>
 
@@ -66,7 +69,7 @@
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Beranda</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Tentang Saya</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Kemampuan</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Keahlian</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#portofolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Kontak Saya</span></a></li>
@@ -186,16 +189,13 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>KEMAMPUAN</h2>
-          <p>Kemampuan yang saya dapatkan dari belajar otodidak, belajar waktu kuliah dan pengalaman selama bekerja</p>
+          <h2>KEAHLIAN</h2>
+          <p>Keahlian teknis yang saya dapatkan dari belajar otodidak, kuliah, dan pengalaman bekerja</p>
         </div>
 
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3" data-aos="fade-up"><div class="skill-group"><h4>Frontend</h4><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">JavaScript</span><span class="skill-chip">Bootstrap</span></div></div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up"><div class="skill-group"><h4>Mobile</h4><span class="skill-chip">Ionic</span><span class="skill-chip">Angular</span><span class="skill-chip">React Native</span></div></div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up"><div class="skill-group"><h4>Low-code</h4><span class="skill-chip">OutSystems</span></div></div>
-          <div class="col-md-6 col-lg-3" data-aos="fade-up"><div class="skill-group"><h4>Desain</h4><span class="skill-chip">Figma</span><span class="skill-chip">Adobe Illustrator</span><span class="skill-chip">Adobe Photoshop</span><span class="skill-chip">CorelDraw</span><span class="skill-chip">Adobe Flash</span><span class="skill-chip">3ds Max</span></div></div>
-        </div>
+        <div class="skill-block" data-aos="fade-up"><h4>Frontend &amp; Mobile UI Development</h4><div><span class="skill-chip chip-fe">Next.js</span><span class="skill-chip chip-fe">React JS</span><span class="skill-chip chip-fe">Tailwind CSS</span><span class="skill-chip chip-fe">Angular</span><span class="skill-chip chip-fe">Ionic</span><span class="skill-chip chip-fe">Flutter</span><span class="skill-chip chip-fe">React Native</span><span class="skill-chip chip-fe">OutSystems</span><span class="skill-chip chip-fe">Bootstrap</span><span class="skill-chip chip-fe">HTML5 / CSS3</span><span class="skill-chip chip-fe">JavaScript</span></div></div>
+        <div class="skill-block" data-aos="fade-up"><h4>UI/UX &amp; Visual Design</h4><div><span class="skill-chip chip-ux">Figma (Wireframing &amp; Prototyping)</span><span class="skill-chip chip-ux">Canva</span><span class="skill-chip chip-ux">Adobe Photoshop</span><span class="skill-chip chip-ux">Adobe Illustrator</span><span class="skill-chip chip-ux">CorelDraw</span><span class="skill-chip chip-ux">Adobe Flash</span><span class="skill-chip chip-ux">3ds Max</span><span class="skill-chip chip-ux">Responsive Web Design</span></div></div>
+        <div class="skill-block" data-aos="fade-up"><h4>Backend Exposure &amp; Tools</h4><div><span class="skill-chip chip-be">Node.js &amp; NestJS (Dasar)</span><span class="skill-chip chip-be">TypeScript</span><span class="skill-chip chip-be">Prisma ORM &amp; PostgreSQL</span><span class="skill-chip chip-be">Supabase</span><span class="skill-chip chip-be">Git / GitHub</span></div></div>
 
       </div>
     </section><!-- End Skills Section -->
