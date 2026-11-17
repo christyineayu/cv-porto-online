@@ -1996,7 +1996,7 @@ a:hover {
   content: ":";
   margin-left: 4px;
   position: absolute;
-  right: 0;
+  right: 9px;
 }
 
 .summaryBox .val {
@@ -2022,6 +2022,89 @@ a:hover {
 
   .section-title h2 {
     font-size: 26px
+  }
+}
+
+/* Tombol unduh CV */
+.cv-download {
+  margin-top: 50px;
+  text-align: center
+}
+
+.cv-download .btn {
+  margin: 0 6px 12px;
+  padding: 12px 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px
+}
+
+.cv-download .btn i {
+  font-size: 20px
+}
+
+.cv-download p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 6px auto 0;
+  max-width: 560px
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary)
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff
+}
+
+.sidebar-cv {
+  display: grid;
+  gap: 8px;
+  padding: 8px 15px 90px
+}
+
+.sc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .25);
+  transition: all .25s
+}
+
+.sc-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, .2)
+}
+
+.sc-btn.sc-main {
+  background: #fff;
+  color: var(--navy);
+  border-color: #fff;
+  font-weight: 600
+}
+
+.sc-btn.sc-main:hover {
+  background: var(--soft);
+  color: var(--navy)
+}
+
+@media (max-width:576px) {
+  .cv-download .btn {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 12px
   }
 }
 
