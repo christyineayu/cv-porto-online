@@ -1416,3 +1416,9 @@ a:hover{color:var(--primary-dark)}
 /* Breadcrumbs */
 .breadcrumbs{background:#f4f8fc}
 .breadcrumbs h2{font-size:24px;font-weight:600;color:var(--navy)}
+
+#skills .skill-block.aos-init.aos-animate{
+  background: white;
+  border-radius: 10px;
+  padding: 20px 20px 13px;
+}
