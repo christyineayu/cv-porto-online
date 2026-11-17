@@ -1966,6 +1966,61 @@ a:hover {
   }
 }
 
+/* Ringkasan resume (rapi di desktop & mobile) */
+.resume .resume-item ul.summaryBox {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0
+}
+
+.resume .resume-item ul.summaryBox li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8eef7
+}
+
+.resume .resume-item ul.summaryBox li:last-child {
+  border-bottom: 0
+}
+
+.summaryBox .lbl {
+  color: var(--muted);
+  font-weight: 500
+}
+
+.summaryBox .lbl::after {
+  content: ":";
+  margin-left: 4px
+}
+
+.summaryBox .val {
+  color: var(--navy);
+  font-weight: 500;
+  overflow-wrap: anywhere
+}
+
+.about .content ul li span {
+  overflow-wrap: anywhere
+}
+
+@media (max-width:576px) {
+  .resume .resume-item ul.summaryBox li {
+    grid-template-columns: 92px 1fr;
+    gap: 8px;
+    font-size: 15px
+  }
+
+  .resume .resume-item h4 {
+    overflow-wrap: anywhere
+  }
+
+  .section-title h2 {
+    font-size: 26px
+  }
+}
+
 #skills .skill-block.aos-init.aos-animate{
   background: white;
   border-radius: 10px;
