@@ -1330,3 +1330,9 @@ section {
   object-fit: cover;
   object-position: top center;
 }
+
+#skills .skill-block.aos-init.aos-animate{
+  background: white;
+  padding: 20px 20px 13px;
+  border-radius: 10px;
+}
