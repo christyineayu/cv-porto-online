@@ -1313,3 +1313,15 @@ section {
     padding: 15px;
   }
 }
+
+/* Perbaikan layout portofolio: tinggi gambar tetap supaya kartu tidak bergeser saat gambar dimuat */
+.portofolio-img {
+  height: 260px;
+  max-height: none;
+}
+.portofolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}

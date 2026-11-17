@@ -12,7 +12,7 @@
     return '<div class="col-lg-4 col-md-6 portofolio-item ' + esc(p.filter) + '">' +
       '<div class="portofolio-wrap">' +
         '<a href="' + img(p.cover) + '" data-gallery="portfolioGallery" class="portofolio-lightbox" title="' + esc(p.judul) + '">' +
-          '<div class="portofolio-img"><img src="' + img(p.cover) + '" class="img-fluid" alt="' + esc(p.judul) + '" loading="lazy"></div>' +
+          '<div class="portofolio-img"><img src="' + img(p.cover) + '" class="img-fluid" alt="' + esc(p.judul) + '"></div>' +
         '</a>' +
         '<div class="portofolio-content"><div class="row">' +
           '<div class="col-12 mb-15"><h2 class="w-title">' + esc(p.judul) + '</h2>' +

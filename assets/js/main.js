@@ -168,6 +168,19 @@
         itemSelector: '.portofolio-item'
       });
 
+      // Susun ulang layout setelah gambar/font selesai dimuat (mencegah tampilan berantakan)
+      let relayoutTimer;
+      const relayout = () => {
+        clearTimeout(relayoutTimer);
+        relayoutTimer = setTimeout(() => portfolioIsotope.layout(), 100);
+      };
+      portfolioContainer.querySelectorAll('img').forEach(img => {
+        if (!img.complete) img.addEventListener('load', relayout);
+      });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+      window.addEventListener('resize', relayout);
+      relayout();
+
       let portfolioFilters = select('#portofolio-flters li', true);
 
       on('click', '#portofolio-flters li', function(e) {
