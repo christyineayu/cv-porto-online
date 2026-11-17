@@ -1314,11 +1314,16 @@ section {
   }
 }
 
-/* Perbaikan layout portofolio: tinggi gambar tetap supaya kartu tidak bergeser saat gambar dimuat */
-.portofolio-img {
-  height: 260px;
-  max-height: none;
+/* Portofolio: grid CSS biasa (tanpa Isotope) */
+.portofolio .portofolio-item { display: flex; }
+.portofolio .portofolio-item.is-hidden { display: none; }
+.portofolio .portofolio-wrap {
+  width: 99%;
+  display: flex;
+  flex-direction: column;
 }
+.portofolio .portofolio-wrap .portofolio-content { flex: 1; }
+.portofolio-img { height: 260px; max-height: none; }
 .portofolio-img img {
   width: 100%;
   height: 100%;

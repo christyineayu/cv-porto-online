@@ -159,47 +159,19 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Filter portofolio (tanpa Isotope, supaya layout selalu rapi)
    */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portofolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portofolio-item'
-      });
-
-      // Susun ulang layout setelah gambar/font selesai dimuat (mencegah tampilan berantakan)
-      let relayoutTimer;
-      const relayout = () => {
-        clearTimeout(relayoutTimer);
-        relayoutTimer = setTimeout(() => portfolioIsotope.layout(), 100);
-      };
-      portfolioContainer.querySelectorAll('img').forEach(img => {
-        if (!img.complete) img.addEventListener('load', relayout);
-      });
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
-      window.addEventListener('resize', relayout);
-      relayout();
-
-      let portfolioFilters = select('#portofolio-flters li', true);
-
-      on('click', '#portofolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
-  });
+  (function () {
+    const items = select('.portofolio-item', true);
+    const filters = select('#portofolio-flters li', true);
+    on('click', '#portofolio-flters li', function (e) {
+      e.preventDefault();
+      filters.forEach(el => el.classList.remove('filter-active'));
+      this.classList.add('filter-active');
+      const f = this.getAttribute('data-filter');
+      items.forEach(it => it.classList.toggle('is-hidden', f !== '*' && !it.matches(f)));
+    }, true);
+  })();
 
   /**
    * Initiate portfolio lightbox 
