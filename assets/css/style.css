@@ -1331,8 +1331,88 @@ section {
   object-position: top center;
 }
 
-#skills .skill-block.aos-init.aos-animate{
-  background: white;
-  padding: 20px 20px 13px;
-  border-radius: 10px;
-}
+
+/*==============================================================
+  TEMA PROFESIONAL (palet konsisten: navy #12315c + biru #2563a8)
+==============================================================*/
+:root{--navy:#12315c;--primary:#2563a8;--primary-dark:#1d4f8a;--soft:#e8f0fa;--text:#1e293b;--muted:#64748b;--accent:#7cc4ff}
+body{font-family:'Inter','Segoe UI',Arial,sans-serif;color:var(--text);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;color:var(--navy)}
+a{color:var(--primary)}
+a:hover{color:var(--primary-dark)}
+
+/* Sidebar & footer */
+#header,#footer{background:var(--navy)}
+#header .profile .box-avatar{border-color:#cfe3fb}
+#header .profile h1{font-size:22px;font-weight:600;letter-spacing:.2px}
+#header .profile .social-links a{background:var(--primary)}
+#header .profile .social-links a:hover{background:var(--accent);color:var(--navy)}
+.nav-menu a,.nav-menu a:focus{color:#c9d8ee;font-size:15px;font-weight:500;border-radius:8px}
+.nav-menu a i,.nav-menu a:focus i{color:#8fb4e3}
+.nav-menu a:hover,.nav-menu .active,.nav-menu .active:focus,.nav-menu li:hover > a{color:#fff;font-weight:600;background:rgba(255,255,255,.1)}
+.nav-menu a:hover i,.nav-menu .active i,.nav-menu .active:focus i,.nav-menu li:hover > a i{color:var(--accent)}
+.nav-menu a:focus:not(:focus-visible){outline:none}
+.mobile-nav-toggle{background:var(--primary)}
+#footer .credits{color:#b8c7de}
+
+/* Tombol */
+.btn{border-radius:10px;font-weight:600}
+.btn-primary{background-color:var(--primary);border-color:var(--primary)}
+.btn-primary:hover,.btn-primary:focus{background-color:var(--primary-dark);border-color:var(--primary-dark)}
+
+/* Hero */
+#hero:before{background:linear-gradient(rgba(10,25,47,.6),rgba(10,25,47,.4))}
+#hero h1{font-family:'Poppins',sans-serif;font-size:56px;line-height:1.2;font-weight:700}
+#hero h1 span{border-bottom-color:var(--accent)}
+#hero p{font-family:'Inter',sans-serif;font-size:22px;font-weight:400}
+#hero .hero-role{font-size:18px;letter-spacing:1px;color:#dbe7f7}
+@media (max-width:768px){#hero h1{font-size:30px;line-height:1.25}#hero p{font-size:18px}}
+
+/* Judul section */
+.section-bg{background:#f4f8fc}
+.section-title h2{font-size:30px;color:var(--navy);letter-spacing:.3px}
+.section-title h2::after{background:var(--primary)}
+.section-title p{color:var(--muted);line-height:1.8;max-width:860px}
+
+/* Tentang */
+.about .content h3{font-size:24px;color:var(--navy)}
+.about .content ul i{color:var(--primary)}
+.about .content p.fst-italic{color:var(--muted)}
+
+/* Resume */
+.resume .resume-title{font-size:18px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--navy);background:var(--soft);border-radius:10px;padding:12px 18px;text-align:left}
+.resume .resume-item{border-left-color:#b9cde6}
+.resume .resume-item::before{background:var(--primary);border:3px solid #cfe3fb}
+.resume .resume-item h4{font-size:16px;line-height:1.4;text-transform:none;font-weight:600;color:var(--navy)}
+.resume .resume-item h5{font-size:13px;font-weight:600;background:var(--soft);color:var(--primary);border-radius:6px;padding:3px 12px}
+.resume .resume-item p,.resume .resume-item li{font-size:15px;color:#334155}
+
+/* Portofolio */
+.portofolio #portofolio-flters{box-shadow:0 2px 12px rgba(18,49,92,.08)}
+.portofolio #portofolio-flters li{font-size:13px;letter-spacing:.5px;color:var(--text)}
+.portofolio #portofolio-flters li:hover,.portofolio #portofolio-flters li.filter-active{background:var(--primary);color:#fff}
+.portofolio .portofolio-wrap{box-shadow:0 6px 20px rgba(18,49,92,.12);border-radius:12px}
+.portofolio-content .w-title{font-size:1.05rem;font-weight:600;color:var(--navy)}
+.portofolio-content .w-more{color:var(--muted);font-size:13px}
+
+/* Detail proyek */
+.portfolio-details{padding-top:40px}
+.portfolio-info{padding:26px;background:#fff;border-radius:12px;box-shadow:0 2px 20px rgba(18,49,92,.1);margin-bottom:24px}
+.portfolio-info h2{font-size:20px;font-weight:600}
+.portfolio-info ul{list-style:none;padding:0;margin:0;font-size:15px}
+.portfolio-info ul li+li{margin-top:10px}
+.portfolio-description h3{font-size:20px;font-weight:600}
+.portfolio-description p{color:#334155}
+.portfolio-tagHr hr{background:var(--primary)}
+.portofolio-details .portofolio-details-slider .swiper-pagination-bullet-active,.portfolio-details .swiper-pagination-bullet-active{background-color:var(--primary)}
+
+/* Kontak */
+.contact .info{border-radius:12px;box-shadow:0 2px 20px rgba(18,49,92,.1)}
+.contact .info i{color:var(--primary);background:var(--soft)}
+.contact .info h4{font-size:18px;color:var(--navy)}
+.contact .info p{color:var(--muted);font-size:15px}
+.contact .info .email:hover i,.contact .info .address:hover i,.contact .info .phone:hover i{background:var(--primary);color:#fff}
+
+/* Breadcrumbs */
+.breadcrumbs{background:#f4f8fc}
+.breadcrumbs h2{font-size:24px;font-weight:600;color:var(--navy)}
